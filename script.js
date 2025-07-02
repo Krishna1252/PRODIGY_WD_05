@@ -1,6 +1,5 @@
 // ========= CONFIG =========
-const API_KEY = "7b277cf12aef42d896b104217250107"; // <-- replace with your key
-
+const API_KEY = "7b277cf12aef42d896b104217250107"; 
 // ========= DOM REFS =========
 const form       = document.getElementById("weatherForm");
 const input      = document.getElementById("cityInput");
@@ -69,8 +68,7 @@ window.addEventListener("load", () => {
       const { latitude, longitude } = pos.coords;
       fetchWeather(`${latitude},${longitude}`);
     },
-    () => {
-      /* silently ignore denial; user can search manually */
+    () => {      
     },
     { timeout: 10000 }
   );
